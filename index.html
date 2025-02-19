@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentazione Progetto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Progetto individuale di Networking</h1>
+            <p class="subtitle">Un viaggio nel mondo della tecnologia.</p>
+        </header>
+        
+        <section class="project-presentation">
+            <h2>Presentazione del Progetto</h2>
+            <div class="description">
+                <p>Il progetto prevede di definire l'architettura di una rete e simulare il suo 
+                    funzionamento su Cisco Packet Tracer. </p>
+                <button class="toggle-button">Descrizione progetto </button>
+                <div class="more-info hidden">
+                    <p>La rete è divisa in 3 LAN (o reti locali) che simulano tre sedi differenti di un'azienda: <br>
+                        <b>Sede principale</b>, <b>filiale commerciale</b> e <b>magazzino</b>. </p>
+                    <p> Nel progetto le diverse LAN sono configurate con indirizzi differenti e sono state diferenziate da 
+                        sfondi di diverso colore.</p>
+                    <p><a href="ImmagineProg.png" class="toggle-button">Clicca qui</a> per visualizzare il progetto. </p>
+                    <p>Invece <a href="ProgettoNetworking.pkt" class="toggle-button">clicca qui</a> per scaricare il progetto. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="creator-presentation">
+            <h2>Chi sono</h2>
+            <div class="creator-info">
+                <p>Ecco una breve (<i>brevissima</i>) descrizione della sottoscritta. </p>
+                <button class="toggle-button">Scopri di più</button>
+                <div class="more-info hidden">
+                    <p>Mi chiamo Francesca Aquilani, ho 19 anni e nel Giugno del 2024 mi sono diplomata in <b>informatica</b> presso 
+                        l'istituto tecnico <i>Alessandro Volta</i> a Pescara.</p>
+                    <p>Attualmente sto frequentando il corso di Cybersecurity presso l'istituto Galiani a Chieti.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const moreInfo = button.nextElementSibling;
+                moreInfo.classList.toggle('hidden');
+                button.textContent = moreInfo.classList.contains('hidden') ? 'Scopri di più' : 'Nascondi';
+            });
+        });
+    </script>
+</body>
+</html>
